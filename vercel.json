@@ -9,12 +9,12 @@
       "destination": "https://anviethomes.github.io/RadissonCollection/$1"
     },
     {
-      "source": "/PimaBay",
-      "destination": "https://anviethomes.github.io/Primabay/"
+      "source": "/Primabay",
+      "destination": "https://vecan-tudong-prima.vercel.app/"
     },
     {
-      "source": "/PimaBay/(.*)",
-      "destination": "https://anviethomes.github.io/Primabay/$1"
+      "source": "/Primabay/(.*)",
+      "destination": "https://vecan-tudong-prima.vercel.app/$1"
     }
   ]
 }
