@@ -1,16 +1,20 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/RadissonCollection",
-      "destination": "https://anviethomes.github.io/RadissonCollection/"
-    },
-    {
-      "source": "/RadissonCollection/(.*)",
-      "destination": "https://anviethomes.github.io/RadissonCollection/$1"
+      "destination": "/RadissonCollection/",
+      "permanent": true
     },
     {
       "source": "/Primabay",
-      "destination": "https://vecan-tudong-prima.vercel.app/"
+      "destination": "/Primabay/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/RadissonCollection/(.*)",
+      "destination": "https://anviethomes.github.io/RadissonCollection/$1"
     },
     {
       "source": "/Primabay/(.*)",
