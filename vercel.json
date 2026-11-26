@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/RadissonCollection",
+      "destination": "https://anviethomes.github.io/RadissonCollection/"
+    },
+    {
+      "source": "/RadissonCollection/(.*)",
+      "destination": "https://anviethomes.github.io/RadissonCollection/$1"
+    },
+    {
+      "source": "/PimaBay",
+      "destination": "https://anviethomes.github.io/Primabay/"
+    },
+    {
+      "source": "/PimaBay/(.*)",
+      "destination": "https://anviethomes.github.io/Primabay/$1"
+    }
+  ]
+}

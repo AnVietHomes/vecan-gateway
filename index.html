@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hệ thống vẽ căn - An Việt Homes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --surface: rgba(20, 27, 41, 0.72);
+      --surface-hover: rgba(30, 41, 62, 0.9);
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f3f6fb;
+      --muted: #9aa6bd;
+      --accent: #3b82f6;
+    }
+
+    [data-theme="light"] {
+      --bg: #f4f6fa;
+      --surface: rgba(255, 255, 255, 0.78);
+      --surface-hover: rgba(255, 255, 255, 0.96);
+      --border: rgba(15, 23, 42, 0.1);
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at 20% 15%, rgba(59, 130, 246, 0.16), transparent 45%),
+                  radial-gradient(circle at 80% 85%, rgba(14, 165, 233, 0.12), transparent 45%),
+                  var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    .topbar {
+      max-width: 840px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .theme-btn {
+      background: var(--surface);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 840px;
+      width: 100%;
+      margin: auto;
+      padding: 24px 0;
+    }
+
+    .heading {
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--surface);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      background: var(--surface-hover);
+      border-color: var(--accent);
+    }
+
+    .card-code {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    .card-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    footer {
+      max-width: 840px;
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <button class="theme-btn" id="themeToggle" type="button">Giao diện Sáng</button>
+  </div>
+
+  <main class="container">
+    <div class="heading">
+      <div class="eyebrow">vecan.anviethomes.com.vn</div>
+      <h1>Chọn dự án vẽ căn</h1>
+      <p class="subtitle">Truy cập nhanh hệ thống sơ đồ và mặt bằng căn hộ theo từng dự án.</p>
+    </div>
+
+    <div class="grid">
+      <a class="card" href="/RadissonCollection/">
+        <div class="card-code">/RadissonCollection</div>
+        <div class="card-title">Radisson Collection Ha Long Bay</div>
+        <p class="card-desc">Mở sơ đồ mặt bằng, tra cứu căn và xuất thông tin quỹ căn dự án.</p>
+        <div class="card-link">Mở dự án -&gt;</div>
+      </a>
+
+      <a class="card" href="/PimaBay/">
+        <div class="card-code">/PimaBay</div>
+        <div class="card-title">Prima Bay</div>
+        <p class="card-desc">Mở sơ đồ mặt bằng và công cụ vẽ căn trực tuyến cho dự án Prima Bay.</p>
+        <div class="card-link">Mở dự án -&gt;</div>
+      </a>
+    </div>
+  </main>
+
+  <footer>An Việt Homes</footer>
+
+  <script>
+    const root = document.documentElement;
+    const btn = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('vecan_theme') || 'dark';
+    applyTheme(saved);
+
+    function applyTheme(theme) {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem('vecan_theme', theme);
+      btn.textContent = theme === 'dark' ? 'Giao diện Sáng' : 'Giao diện Tối';
+    }
+
+    btn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>
